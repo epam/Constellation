@@ -1,0 +1,261 @@
+<div>
+
+    <div class="form-container"> 
+
+            <div class="form-row"> 
+                    <div class="form-cell">
+                            <label>{{i18n "nameText"}}</label>
+                    </div>
+
+                    <div class="form-cell-long">
+                            {{input disabled=true type="text" value=data.name }}
+                    </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                    <div class="form-cell">
+                            <label>{{i18n "nodeText"}}</label>
+                    </div>
+
+                    <div class="form-cell-long">
+                            {{input disabled=true type="text" value=data.node.name }}
+                    </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                    <div class="form-cell">
+                            <label>{{i18n "tableIdText"}}</label>
+                    </div>
+
+                    <div class="form-cell-long">
+                            {{input disabled=true type="text" value=data.tableId }}
+                    </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                    <div class="form-cell">
+                            <label>{{i18n "idleTimeoutText"}}</label>
+                    </div>
+
+                    <div class="form-cell-long">
+                            {{input disabled=true type="text" value=data.idleTimeout }}
+                    </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                    <div class="form-cell">
+                            <label>{{i18n "hardTimeoutText"}}</label>
+                    </div>
+
+                    <div class="form-cell-long">
+                            {{input disabled=true type="text" value=data.hardTimeout }}
+                    </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                    <div class="form-cell">
+                            <label>{{i18n "priorityText"}}</label>
+                    </div>
+
+                    <div class="form-cell-long">
+                            {{input disabled=true type="text" value=data.priority }}
+                    </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+    </div>
+</div>
+
+<div>
+
+	<div class="form-container">
+
+			{{i18n "layer_camel_case"}} 2 <br/>
+
+	        <div class="form-row"> 
+	        	
+                <div class="form-cell">
+                        <label>{{i18n "ethernetTypeText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.etherType }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "vlanIdText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.vlanId }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+
+           	<div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "vlanPriorText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.vlanPriority }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "sourceMacText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.dlSrc }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "destMacText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.dlDst }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+             	<div class="form-cell">
+            		{{i18n "layer_camel_case"}} 3 
+            	</div>
+            	<div class="form-cell-long" style="height: 22px;">
+            	</div>
+            </div>
+            <br/>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "sourceIPText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.nwSrc }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+        	<div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "destIPText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.nwDst }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div> 
+
+        	<div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "tosBitsText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.tosBits }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+             	<div class="form-cell">
+            		{{i18n "layer_camel_case"}} 4 
+            	</div>
+            	<div class="form-cell-long" style="height: 22px;">
+            	</div>
+            </div>
+            <br/>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "sourcePortText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.tpSrc }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "destPortText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true disabled=true type="text" value=data.tpDst }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+            <div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "protocolText"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.protocol }}
+                </div>
+
+            </div>
+            <div class="clear-floats"></div>
+
+
+	</div>
+</div>
+
+<div>
+
+	<div class="form-container"> 
+		<div class="form-row"> 
+                <div class="form-cell">
+                        <label>{{i18n "actions"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+            		{{textarea disabled=true rows="4" cols="25" value=data.actions}}
+                </div>
+
+            </div>
+        <div class="clear-floats"></div>
+
+	</div>
+</div>

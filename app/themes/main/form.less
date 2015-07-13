@@ -1,0 +1,52 @@
+@import "basic.less";
+
+form {
+    label {
+        color: @form-label-color;
+    }
+}
+
+textarea, input {
+    border: 0;
+    border-bottom: 1px solid transparent;
+    outline: 0;
+}
+
+textarea:focus, input:focus {
+    border-bottom: 1px solid @bg-color-advanced;
+    background: @bg-color-highlight;
+}
+
+textarea:hover, input:hover {
+    border-bottom: 1px solid @bg-color-advanced;
+}
+textarea[disabled]:hover, input[disabled]:hover {
+    border-bottom: 1px solid transparent;
+}
+
+input[type=submit]{
+    padding: 5pt 10pt; 
+    background: @form-button-color;
+    color: white;
+    border: 0;
+    margin: 0;
+}
+
+input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+    background: @form-button-hover-color;
+    cursor: pointer;
+}
+
+input[type=submit]:disabled {
+    background: @form-button-disabled-color;
+}
+
+input[type=checkbox], input[type=radio] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+}
+
+input[type=radio] {
+    bottom: 2px;
+}

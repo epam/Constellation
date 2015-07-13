@@ -1,0 +1,47 @@
+<header class="unselectable">
+
+  {{partial "mainPage/logo"}}
+
+  {{view App.NavigationMenuView}}
+
+</header>
+
+<div class="content">
+
+    <div class="middle">
+    <div class="center-layout">
+
+        <div class="login-form-container">
+
+            <form id="loginForm" {{action "login" on="submit"}}>
+              <div class="login-error">{{i18n login_error}}</div>
+              <div class="form-group">
+                <label>{{i18n login_upper_case}}</label>
+                <input type="text" name="username" id="username" placeholder="{{i18n "userNameText"}}" tabindex="1" required autofocus>
+              </div>
+
+              <div class="form-group">
+                <label>{{i18n password_upper_case}}</label>
+                <input type="password" name="password" id="password" placeholder="{{i18n "passwordText"}}" tabindex="2" required/>
+              </div>
+
+              <div class="checkbox-group">
+                  {{input type="checkbox" name="isAdmin" checked=rememberMe tabindex="3"}}
+                  <label class="font-color-light">
+                      {{i18n remember_name}}
+                  </label>
+              </div>
+
+              <input type="submit" name="commit" value="{{i18n login_button}}" tabindex="4">
+
+            </form>
+
+        </div>
+
+    </div>
+    </div>
+</div>
+{{outlet modal}}
+{{view App.FooterView}}
+
+<div id="mask"></div>

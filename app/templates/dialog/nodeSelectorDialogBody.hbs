@@ -1,0 +1,19 @@
+<div class="node-selector-body">
+
+	<div class="widget-search">
+		<input type="text" name="" placeholder="{{i18n "searchText"}}" />
+	</div>
+
+	<div class="widget-nodes">
+		{{#each model.filteredNodes}}
+
+			<div id="nodes-list">
+				<span class="node-attribute node-item unselectable" {{action selectedNode node.name target="view"}}>
+				 {{node.name}}  
+				</span>
+			</div>
+		{{/each}}
+	</div>
+
+	
+</div>

@@ -1,0 +1,157 @@
+@import "basic.less";
+
+.node-selector {
+    margin: 10pt 5pt 5pt 10pt;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.grid-icon {
+    background: url("images/paging-sprite.png") 0 0 no-repeat;
+    height: 13px;
+    width: 13px;
+}
+
+.flows-table {
+    padding: 0 10pt 0 10pt;
+    
+    .ui-jqgrid {
+        .installed-flow-row {
+            background: @grid-row-installed-flow;
+        }
+        
+        .ui-jqgrid-view {
+            font-size: 10pt;
+        }
+
+        tr.ui-jqgrid-labels {
+            background: @grid-header-bg-color;
+            color: @grid-header-font-color;
+        }
+
+        .ui-jqgrid-htable {
+            border: 1px solid @grid-border-color;
+            border-collapse: collapse;
+            
+            th.ui-th-column {
+                border: 1px solid @grid-border-color;
+                font-weight: bold;
+                font-size: 12pt;
+                padding-bottom: 5px;
+            }
+        }
+
+        .ui-jqgrid-btable {
+
+            tr.jqgrow td {
+                border-bottom: 1pt solid @grid-border-color;
+            }
+
+            tr.ui-row-ltr td {
+                border-right-width: 0pt;
+                text-align: left;
+            }
+
+            tr.jqgrow.ui-state-hover td {
+                border-bottom-color: @grid-row-hover-color;
+            }
+
+            .jqgrow.ui-state-highlight td {
+                background: @grid-row-selected-color;
+            }
+
+        }
+        
+        .ui-jqgrid-pager {
+            height: auto;
+            
+            .ui-pager-control {
+                background: @grid-header-bg-color;
+                border-top: 1px solid @grid-border-color;
+                border-bottom: 1px solid @grid-border-color;
+            }
+                
+            .ui-pg-table {
+                position: relative;
+                height: 100%;
+                border-collapse: collapse;
+                font-size: 10pt;
+
+                .ui-pg-button.ui-corner-all.ui-state-hover {
+                    background: @form-button-hover-color;
+                }
+
+                #paging_right {
+                    display: none;
+                }
+                
+                #paging_center {
+                    .ui-pg-table {
+                        float: right;
+                    }
+                }
+                
+                .ui-separator {
+                    display: none;
+                    border: none;
+                }
+
+                td {
+                    padding: 0;
+                }
+
+                .ui-pg-table {
+                    border: 0;
+
+                    td {
+                        .unselectable;
+                        padding: 2px;
+                        font-weight: bold;
+                    }
+
+                    .ui-pg-button {
+                        cursor: pointer;
+                        border-left: 1px solid @grid-border-color;
+                        border-right: 1px solid @grid-border-color;
+
+                        span.ui-icon-seek-prev {
+                            .grid-icon;
+                            background-position: -77px 0;
+                        }
+
+                        span.ui-icon-seek-first {
+                            .grid-icon;
+                            background-position: -25px 0;
+                        }
+
+                        span.ui-icon-seek-end {
+                            .grid-icon;
+                            background-position: -51px 0;
+                        }
+
+                        span.ui-icon-seek-next {
+                            .grid-icon;
+                            background-position: -103px 0;
+                        }
+                        
+                        span.ui-icon-refresh {
+                            .grid-icon;
+                            background-position: -13px 0;
+                        }
+
+                    }
+                    
+                    .ui-state-disabled {
+                        cursor: default;
+                        opacity: .5;
+                    }
+
+                }
+
+            }
+            
+        }
+        
+    }
+
+}

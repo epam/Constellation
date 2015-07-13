@@ -1,0 +1,198 @@
+@import "basic.less";
+
+/** Modal dialog */
+.modal {
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    min-width: 20%;
+    max-width: 90%;
+    min-height: 20%;
+    max-height: 90%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: @bg-color-dark-gray;
+    z-index: 9999;
+
+    .modal-header {
+        position: relative;
+        height: 23pt;
+        margin: 0 5px;
+        border-bottom: @separator-color solid 1px;
+
+        .modal-title {
+            font-size: 15pt;
+            font-weight: bold;
+            width: 30%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    }
+
+    .modal-body {
+        position: relative;
+        margin: 10px 15px;
+        text-align: justify;
+        box-sizing: border-box;
+        overflow: auto;
+
+        button {
+            padding: 2pt 4pt;
+            background: @form-button-color;
+            color: white;
+            border: 0;
+            margin: 0;
+        }
+
+        button.disabled-button{
+            background: @form-button-hover-color;
+        }
+
+        button.add-button{
+            margin: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        p {
+            margin: 0;
+        }
+
+    }
+
+    .modal-footer {
+        margin: 0 5px;
+        padding: 5px 0 25px 0;
+        position: relative;
+        border-top: @separator-color solid 1px;
+        text-align: right;
+        bottom: 0;
+        box-sizing: border-box;
+        height: 23pt;
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+}
+
+/** Editor classes */
+.modal.editor {
+
+    .modal-body {
+        min-width: 400pt;
+        min-height: 200pt;
+
+        label {
+            color: @form-label-color;
+        }
+
+    }
+
+    .form-container {
+        overflow: auto;
+        margin: 8pt;
+        max-height: 300pt;
+        min-width: 350pt;
+    }
+
+    .form-row {
+
+    }
+
+    .form-cell {
+        width: 150pt;
+        float: left;
+        margin: 3pt 0;
+    }
+
+    .form-cell-long {
+        .form-cell;
+
+        width: 180pt;
+
+        input[type=text], input[type=textarea] {
+            width: 160pt;
+        }
+
+        .k-widget.k-dropdown.k-header {
+            background: none repeat scroll 0 0 rgb(55, 55, 55);
+            width: 162pt;
+        }
+        
+        textarea {
+            max-width: 200pt;
+            max-height: 150pt;
+        }
+
+    }
+
+    .editor-tabs {
+        border: 0;
+
+        .k-tabstrip-items {
+            padding: 0;
+            position: fixed;
+            top: 0;
+            margin-left: 30%;
+
+            .k-item {
+                height: 23pt;
+                border-top: 0;
+                font-weight: bold;
+                background: @bg-color-gray;
+
+                .k-loading {
+                    border: 0;
+                }
+
+            }
+            .k-item:hover {
+                background: @bg-color-advanced;
+            }
+
+            .k-state-active {
+                cursor: default;
+                padding-bottom: 0;
+                border-bottom: 1px solid @bg-color-dark-gray;
+                background: @bg-color-dark-gray;
+            }
+            .k-state-active:hover {
+                cursor: default;
+                background: @bg-color-dark-gray;
+
+                a {
+                    cursor: default;
+                }
+
+            }
+
+        }
+
+        .k-content {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+}
+/** Safari transition fix */
+.k-safari .modal.editor .editor-tabs .k-tabstrip-items {
+    top: -31.5pt;
+}
+/** Node Selector Dialog */
+.node-selector-body {
+    min-height: 300px;
+    width: 360pt;
+}

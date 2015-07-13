@@ -1,0 +1,88 @@
+
+<div class="back-button widget-template jcarousel-control-prev">
+	{{!-- <div class="vertical-block"></div> --}}
+	<div class="back-button-icon"></div>
+</div>
+
+<div class="next-button widget-template jcarousel-control-next">
+	{{!-- <div class="vertical-block"></div> --}}
+	<div class="next-button-icon"></div>
+</div>
+
+<div class="jcarousel">
+    <ul>
+
+	    {{#each configuredWidgets}}
+			<li class="widget-item">
+
+                            <table class="widget-template">
+                                <tr class="widget-template-title-container">
+                                    <td>{{title_localized}}</td>
+                                </tr>
+                                <tr class="widget-template-center-container">
+                                    <td>
+                                        <div class="widget-template-mockup action-button-delete" {{action deleteWidget information.id}}>
+                                            <div class="widget-image">
+                                                <img {{bind-attr src="image"}} alt=""/>
+                                            </div>
+                                            <div class="action-button">
+                                                <a href="#" widget-id="{{information.id}}">{{i18n deleteText}}</a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-template-description">
+                                            <div>
+                                                {{description_localized}}
+                                            </div>
+                                            <div>
+                                                {{documentation_localized}}
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="widget-template-footer">
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+
+			</li>
+		{{/each}}
+
+		{{#each availableWidgets}}
+			<li class="widget-item">
+
+                            <table class="widget-template">
+                                <tr class="widget-template-title-container">
+                                    <td>{{title_localized}}</td>
+                                </tr>
+                                <tr class="widget-template-center-container">
+                                    <td>
+                                        <div class="widget-template-mockup action-button-add" {{action addWidget information.id}}>
+                                            <img {{bind-attr src="image"}} alt=""/>
+                                            <div class="action-button">
+                                                <a href="#" widget-id="{{information.id}}">{{i18n addText}}</a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-template-description">
+                                            <div>
+                                                {{description_localized}}
+                                            </div>
+                                            <div>
+                                                {{documentation_localized}}
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="widget-template-footer">
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+
+			</li>
+		{{/each}}
+
+    </ul>
+</div>
+
+
+
+

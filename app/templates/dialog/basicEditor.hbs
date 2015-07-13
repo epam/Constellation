@@ -1,0 +1,24 @@
+<div class="test">
+
+    <div class="modal editor">
+        <div class="modal-header">
+            <div class="btn-close">
+      	  <a href="#" {{ action cancel target=view }} >&times;</a>
+      	</div>
+      	<div {{bind-attr title=data.name}} class="modal-title">
+            {{title}} {{data.name}}
+        </div> 
+    </div>
+        
+        <div class="modal-body">
+            <form id="editor-tabs" class="editor-tabs">
+                {{partial editorDialogTabs}}
+                {{partial editorDialogBody}}
+            </form>
+        </div>
+
+        {{partial editorDialogFooter}}
+
+     
+    </div>
+</div>

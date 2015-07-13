@@ -1,0 +1,11 @@
+node_modules
+bower_components
+temp
+dist
+.tmp
+app/lib
+/C
+/nbproject
+/nbproject/private/
+/.arcconfig
+config

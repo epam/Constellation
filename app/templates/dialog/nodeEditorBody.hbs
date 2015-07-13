@@ -1,0 +1,132 @@
+<div>
+    <div class="form-container">
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.id"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.node.id}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.mac"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="text" value=data.properties.macAddress.value}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.type"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{data.node.type}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.connectedSince"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{data.node.connectedSince}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.description"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{data.properties.description.value}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.capabilitiesLabel"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{data.node.capabilities}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.supportedActions"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{data.properties.supportedFlowActions.value}}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+    </div>
+</div>
+
+<div>
+    <div class="form-container">
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.configuration.fragment_normal"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="checkbox" checked=data.configuration.fragment_normal_val }}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.configuration.fragment_drop"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="checkbox" checked=data.configuration.fragment_drop_val }}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.configuration.fragment_reasemble"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="checkbox" checked=data.configuration.fragment_reasemble_val }}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+        <div class="form-row">
+                <div class="form-cell">
+                        <label>{{i18n "node.configuration.fragment_mask"}}</label>
+                </div>
+
+                <div class="form-cell-long">
+                        {{input disabled=true type="checkbox" checked=data.configuration.fragment_mask_val }}
+                </div>
+        </div>
+        <div class="clear-floats"></div>
+
+    </div>
+</div>

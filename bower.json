@@ -1,0 +1,27 @@
+{
+  "name": "E-OpenFlow",
+  "version": "1.0.1",
+  
+  "dependencies": {
+    "components-threejs"         : "0.0.69",
+    "threejs-examples"           : "latest",
+    "ember"                      : "1.7.0",
+    "handlebars"                 : "1.3.0",
+    "ember-data"                 : "1.0.0-beta.12",    
+    "ember-i18n"                 : "latest",
+    "cldr"                       : "latest",
+    "ember-localstorage-adapter" : "latest",
+    "jcarousel"                  : "latest",
+    "jqgrid"                     : "4.6.0",
+    "hammerjs"                   : "2.0.0",
+    "kendo-ui-core"              : "latest"
+  },
+
+  "devDependencies": {
+    "ember-mocha-adapter": "0.1.2"
+  },
+
+  "resolutions": {
+    "handlebars": "1.3.0"
+  }
+}

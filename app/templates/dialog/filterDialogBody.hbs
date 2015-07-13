@@ -1,0 +1,47 @@
+<p>Name {{input type="text" value=filterSetName}}</p>
+  {{#each controller}}
+    <div>
+      <div class = "filter-field">
+        {{view Ember.Select
+               content=parentController.filterNames
+               value=selectedFilterName
+               prompt=parentController.filterNamePrompt
+        }}
+      </div>
+      <div class = "filter-field">
+        {{view Ember.Select
+               content=operatorType.items
+               value=selectedOperator
+               prompt=parentController.filterOperatorPrompt
+        }}
+      </div>
+      <div class = "filter-field">
+        {{#if isEnumValue}}
+          {{view Ember.Select
+                 content=valueChoices.items
+                 value=selectedValue
+                 prompt=parentController.filterValuePrompt
+          }}
+        {{else}}
+          {{input type="text" value=selectedValue}}
+        {{/if}}
+      </div>
+      <div class = "filter-field">
+        <button {{bind-attr class="isEnabled::disabled-button"}} {{action "toggleFilterState"}}>
+          {{#if isEnabled}}
+            {{i18n disableText}}
+          {{else}}
+            {{i18n enableText}}  
+          {{/if}}         
+        </button>
+      </div>
+      <div class = "filter-field">
+        <button id="deleteButton" {{action "delete"}}>
+           {{i18n deleteText}}
+        </button>
+      </div>
+    </div>
+  {{/each}}
+<button id="addButton" class = "add-button pull-right" {{action "add"}}>
+  {{i18n addText}}
+</button>

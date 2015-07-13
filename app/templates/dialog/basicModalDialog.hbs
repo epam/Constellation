@@ -1,0 +1,15 @@
+<div class="test">
+
+	<div class="modal">
+	  <div class="modal-header">
+	    {{partial modalDialogHeader}}  
+	  </div>
+	  <div class="modal-body">
+	    {{partial modalDialogBody}}
+	  </div>
+	  <div {{bind-attr class="footerVisible:modal-footer:hidden" }}>
+	    {{partial modalDialogFooter}}
+	  </div>
+	</div>
+
+</div>

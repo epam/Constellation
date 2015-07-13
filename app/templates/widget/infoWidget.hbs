@@ -1,0 +1,119 @@
+<div class="widget-tabbed-panel unselectable">
+
+	<div {{bind-attr class=":widget-tab isTabActive:active"}} {{action "goToFeatures" target="view"}}>{{i18n features_camel_case}}</div>
+	<div {{bind-attr class=":widget-tab isTabActive::active"}} {{action "goToConfiguration" target="view"}}>{{i18n configuration_camel_case}}</div>
+	<div class="clear-floats"></div>
+
+</div>
+
+<div {{bind-attr class=":widget-content :node-info-fetures isTabHide:hide"}}>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.id"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.node.id}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.mac"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.properties.macAddress.value}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.type"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.node.type}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.connectedSince"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.node.connectedSince}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.description"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.properties.description.value}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.capabilitiesLabel"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.node.capabilities}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.supportedActions"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.properties.supportedFlowActions.value}}
+        </span>
+    </div>
+
+</div>
+
+<div {{bind-attr class=":widget-content :node-info-configuration isTabHide::hide"}}>
+    <div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.configuration.fragment_normal"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.configuration.fragment_normal}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.configuration.fragment_drop"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.configuration.fragment_drop}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.configuration.fragment_reasemble"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.configuration.fragment_reasemble}}
+        </span>
+    </div>
+
+    <div class="node-property">
+        <span class="widget-label">
+            {{i18n "node.configuration.fragment_mask"}}:&nbsp;
+        </span>
+        <span class="node-value">
+            {{model.configuration.fragment_mask}}
+        </span>
+    </div>
+
+    </div>
+</div>
+
+
+

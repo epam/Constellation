@@ -1,0 +1,124 @@
+<table class="grid-view" cellspacing="0" cellpadding="0" border="0" tabindex="0" role="grid" >
+
+	<thead>
+
+		<tr class="grid-row-header">
+
+			<th class="checkbox-header">
+				{{#if isMultiselect}}
+					{{view Ember.Checkbox class="complete" checkedBinding="selectAll"}}
+				{{/if}}
+			</th>
+			
+
+			{{#each column in columns}}
+				{{#if column.display}}
+					<th 
+					{{bind-attr class="column.isSortable:grid-header-sortable:grid-header"}}
+					{{action "sort" column.property column.isSortable}}
+					>
+						{{column.header}}
+						<span {{bind-attr class="column.sortingClass"}}></span>
+					</th>
+				{{/if}} 
+		  	{{/each}}
+
+		  	<th class="column-selector">
+				<div class="column-config">
+
+					<div class="column-config-button" {{action toggleColumnConfig}}></div>
+
+					<div {{bind-attr class="columnConfigVisible:visible:hidden" }}>
+
+						<ul class="dropdown-menu dropdown-column-selector">
+							{{#each columns}}
+								<li>
+									<label class="checkbox">
+										{{view Ember.Checkbox checkedBinding="display" disabledBinding="always"}} 
+										{{header}}
+									</label>
+								</li>
+							{{/each}}
+						</ul>
+					</div>
+
+				</div>
+			</th>
+
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+		{{#each row in rows}}
+
+			<tr class="grid-row" {{bind-attr class="row.isSelected:row-selected:row-deselected"}}>
+
+				<td class="checkbox-cell">
+			  		{{view Ember.Checkbox class="complete" checkedBinding="row.isSelected"}}
+			  	</td>
+
+				{{#each column in columns}}
+					{{#if column.display}}
+						<td class="grid-cell">{{gridCell row column}}</td>
+					{{/if}}
+				{{/each}}
+
+				<td class="column-selector"></td>
+
+			</tr>
+		{{/each}}
+
+
+	</tbody>
+
+</table>
+
+<div class="grid-toolbar"> 
+
+	<div class="buttons-block">
+		{{#each button in toolbar.buttons}}
+			<div class="toolbar-button unselectable" {{action "toolbarButtonClicked" button.action }}> 
+				{{button.title}} 
+			</div>
+		{{/each}}
+	</div>
+
+	<div class="grid-paging"> 
+		
+		<div {{bind-attr class="hasNextPage::ui-state-disabled"}}>
+			<div class="toolbar-last-page" 
+				{{action "changePage" "last_page" }}>
+			</div>
+		</div>
+
+		<div {{bind-attr class="hasNextPage::ui-state-disabled"}}>
+			<div class="toolbar-next-page toolbar-button" 
+				{{action "changePage" "next_page" }}>
+			</div>
+		</div>
+
+		<div>
+			<div class="page-info">
+				{{currentPage}} {{i18n of}} {{pagesCount}}
+			</div>
+		</div>
+
+		<div {{bind-attr class="hasPreviousPage::ui-state-disabled"}}>
+			<div class="toolbar-previous-page toolbar-button" 
+				{{action "changePage" "previous_page" }}>
+			</div>
+		</div>
+
+		<div {{bind-attr class="hasPreviousPage::ui-state-disabled"}}>
+			<div class="toolbar-first-page toolbar-button" 
+				{{bind-attr class="!hasPreviousPage:ui-state-disabled"}}
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+

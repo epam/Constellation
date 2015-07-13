@@ -1,0 +1,40 @@
+<header class="unselectable">
+
+	{{partial "mainPage/logo"}}
+    
+	<div class="tabbed-panel">
+
+		<div class="nav-block topology">
+			
+			{{#link-to "openflow.topology"}} 
+				{{i18n topology}}
+			{{/link-to}}
+		
+		</div>
+		<div class="nav-block gallery">
+			<div class="gear" href="#" {{ action open "widgetGallery" "widgetGallery"}}></div>
+		</div>
+		
+
+		<div class="nav-block flows">
+			{{#link-to "openflow.flows"}} {{i18n flows}} {{/link-to}}
+		</div>
+
+	</div>
+
+	{{view App.TopologyPageNavigationMenuView}}
+
+</header>
+
+<div class="content">
+{{view App.ErrorPanelView}}
+
+	{{outlet}}
+
+</div>
+
+{{view App.FooterView}}
+
+<div id="mask"></div>
+
+<div id="editor-mask"></id>

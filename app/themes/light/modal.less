@@ -1,0 +1,168 @@
+@import "basic.less";
+
+/** Modal dialog */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 20%;
+    max-width: 80%;
+    min-height: 20%;
+    max-height: 80%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: @bg-color-dark-gray;
+    z-index: 9999;
+
+    .modal-header {
+        position: relative;
+        height: 23pt;
+        margin: 0 5px;
+        border-bottom: #ffffff solid 1px;
+
+        .modal-title {
+            font-size: 15pt;
+            font-weight: bold;
+        }
+
+    }
+
+    .modal-body {
+        position: relative;
+        margin: 10px 15px;
+        text-align: justify;
+        box-sizing: border-box;
+        overflow: auto;
+
+        button {
+            padding: 2pt 4pt;
+            background: @form-button-color;
+            color: white;
+            border: 0;
+            margin: 0;
+        }
+
+        button.disabled-button{
+            background: @form-button-hover-color;
+        }
+
+        button.add-button{
+            margin: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        p {
+            margin: 0;
+        }
+
+    }
+
+    .modal-footer {
+        margin: 0 5px;
+        padding: 5px 0 25px 0;
+        position: relative;
+        border-top: #ffffff solid 1px;
+        text-align: right;
+        bottom: 0;
+        box-sizing: border-box;
+        height: 23pt;
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+}
+
+/** Editor classes */
+.modal.editor {
+
+    .modal-body {
+        min-width: 400pt;
+        min-height: 300pt;
+
+        label {
+            color: @form-label-color;
+        }
+
+    }
+
+    .form-container {
+        overflow: auto;
+        margin: 8pt;
+    }
+
+    .form-row {
+
+    }
+
+    .form-cell {
+        width: 150pt;
+        float: left;
+        margin: 3pt 0;
+    }
+
+    .form-cell-long {
+        .form-cell;
+
+        width: 180pt;
+
+        input {
+            width: 160pt;
+        }
+    }
+
+    .editor-tabs {
+        border: 0;
+        position: fixed;
+        top: -5pt;
+
+        .k-tabstrip-items {
+            margin-left: 35%;
+        }
+
+        .k-content {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .k-item {
+            font-weight: bold;
+            background: @bg-color-gray;
+        }
+        .k-item:hover {
+            background: @bg-color-advanced;
+        }
+
+        .k-state-active {
+            cursor: default;
+            padding-bottom: 0;
+            border-bottom: 1px solid @bg-color-dark-gray;
+            background: @bg-color-dark-gray;
+        }
+        .k-state-active:hover {
+            cursor: default;
+            background: @bg-color-dark-gray;
+
+            a {
+                cursor: default;
+            }
+
+        }
+
+    }
+
+}
+
+/** Node Selector Dialog */
+.node-selector-body {
+    margin-top: 45pt;
+    margin-left: 20pt;
+    min-height: 300px;
+    width: 360pt;
+}

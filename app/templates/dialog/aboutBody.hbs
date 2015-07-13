@@ -1,0 +1,22 @@
+ <div class="about">
+    <p><b>{{versionTitle}}</b><br/>
+        {{versionText}}
+    </p><br />
+
+    <p><b>{{headquatersTitle}}</b><br/>
+        {{headquatersText}}<br/>
+        {{phoneFaxText}}
+    </p><br />
+
+    <p><b>{{i18n productOwners}}</b><br />
+    {{#each owner in owners}}
+        {{owner}}<br />
+    {{/each}}
+    </p><br />
+    
+    <p><b>{{i18n developers}}</b><br />
+    {{#each developer in developers}}
+        {{developer}}<br />
+    {{/each}}
+    </p><br />
+ </div>

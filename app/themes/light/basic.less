@@ -1,0 +1,85 @@
+@separator-color: #ffffff;
+/** Background colors */
+@bg-color-light-gray: #4d4d4d;
+@bg-color-dark-gray: #242424;
+@bg-color-gray: #373737;
+@bg-color-advanced: #6981fe;
+@bg-color-error: #fe3434;
+@bg-color-mask: #ffffff;
+@bg-color-highlight: #dde2ff;
+/** Font colors */
+@font-color-light: #ffffff;
+@font-color-advanced: #6981fe;
+@font-color-error: #fe3434;
+@font-color-disabled: #cacaca;
+/** Form colors */
+@form-label-color: #bbd8fd;
+@form-button-color: @bg-color-gray;
+@form-button-hover-color: #6981fe;
+@form-button-disabled-color: #8e8e8e;
+/** Grid colors */
+@grid-header-bg-color: #303030;
+@grid-border-color: #414141;
+@grid-header-font-color: #bbd8fd;
+@grid-row-selected-color: rgba(105, 129, 254, .5);
+@grid-row-hover-color: @bg-color-advanced;
+/** Widget colors */
+@widget-bg-color: #353535;
+@widget-gallery-border-color: #676767;
+@widget-gallery-add-color: @form-button-hover-color;
+@widget-gallery-delete-color: @bg-color-error;
+
+/** General styles */
+.unselectable {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clear-floats {
+    clear: both;
+    display: none;
+}
+
+.font-color-light {
+    color: @font-color-light;
+}
+
+.font-color-advanced {
+    color: @font-color-advanced;
+}
+
+.form-button-hover-color {
+    background: @form-button-hover-color;
+}
+
+.btn-close {
+    padding-bottom: 4px;
+}
+.btn-close a {
+    cursor: pointer; 
+    float: right;
+    font-size: 19pt;
+    font-weight: bold;
+    text-decoration: none;
+}

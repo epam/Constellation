@@ -1,0 +1,14 @@
+<div class="widget-footer">
+
+	<div class="widget-links pull-right">
+
+		<span {{action viewFlows}} {{bind-attr class=":separated-block isNodeSelected::disabled-button"}}>
+		    <a href="#">{{i18n viewFlows}}</a><span></span>
+		</span>
+
+		<span {{bind-attr class="isNodeSelected::disabled-button"}}>
+		   <a href="#" {{action "edit" }}>{{i18n nodeDetails}}</a>
+		</span>
+	</div>
+
+</div>

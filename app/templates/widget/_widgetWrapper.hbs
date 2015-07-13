@@ -1,0 +1,10 @@
+<div {{bind-attr class=":widget-title-topology isOpened:opened"}} >
+
+  <span class="widget-title-wrapper" {{bind-attr title=widgetName}}>{{widgetName}}</span>
+	
+        <span class="btn-close" {{action deleteWidget widgetId target="view"}}>
+            <a href="#" {{ action cancel target=view }} >&times;</a>
+  	</span>
+	<span {{bind-attr class=":navigation-icon-widget isOpened:opened"}} {{action toggleWidget target="view"}}></span>
+		
+</div>

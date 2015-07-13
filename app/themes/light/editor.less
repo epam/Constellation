@@ -1,0 +1,68 @@
+@import "variables.less";
+
+
+.editor-dialog {
+	min-width: 400pt;
+	min-height: 300pt;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: auto;
+	background-color: black;
+	z-index:9999; 
+}
+
+.form-container {
+    overflow: auto;
+    margin: 8pt;
+}
+
+.form-row {
+
+}
+
+.form-cell {
+	width: 150pt;
+	float: left;
+	margin: 3pt 0;
+}
+
+.form-cell-long {
+    .form-cell;
+
+    width: 180pt;
+
+    input {
+        width: 160pt;
+    }
+}
+
+.editor-tabbed-panel {
+
+    height: 24pt;
+    margin: 0 0 0 30%;
+
+   .widget-tab {
+        display: inline-block;
+        padding: 4pt 5pt 5pt;
+        background: black;
+        cursor: pointer;
+        height: 50%;
+        border-right: 1pt solid;
+        border-left: 1pt solid;
+        text-align: center;
+        margin-right: -4pt;
+    }
+
+    .widget-tab.active {
+        background: @bg-color-light-gray;
+        border-bottom: 1pt solid @bg-color-light-gray;
+    } 
+
+}
+
+.editor-body {
+	margin-top: -22pt;
+    overflow: auto;
+}

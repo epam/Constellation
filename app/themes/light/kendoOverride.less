@@ -1,0 +1,72 @@
+@import "basic.less";
+
+.ember-application {
+
+    /** Dropdown Styles */
+    .k-dropdown-wrap {
+        border: 0;
+
+        .k-input {
+            line-height: 1.55em;
+        }
+
+        .k-select {
+
+            .k-icon {
+                background: url(images/arrows-sprite.png) 0 0 no-repeat;
+            }
+        }
+
+    }
+
+    .k-dropdown.k-state-border-down {
+        background: @bg-color-gray;
+
+        .k-dropdown-wrap.k-state-active {
+
+            .k-select {
+
+                .k-icon {
+                    background-position: -13px 0;
+                }
+            }
+
+        }
+
+    }
+
+    .k-popup.k-list-container {
+        background: @bg-color-gray;
+        border: 0;
+
+        .k-list {
+            overflow: hidden !important;
+        }
+
+        .k-item {
+            cursor: pointer;
+            border: 0;
+            padding: 2px 5px;
+            margin-bottom: 1px;
+            white-space: nowrap;
+        }
+
+        .k-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .k-item.k-state-hover {
+            background: @bg-color-advanced;
+            border: 0;
+            padding: 2px 5px;
+        }
+
+        .k-state-selected, .k-state-selected.k-state-hover {
+            cursor: default;
+            background: @bg-color-dark-gray;
+        }
+
+    }
+    /** Dropdown Styles end */
+
+}
