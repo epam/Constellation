@@ -286,7 +286,7 @@ module.exports = function(grunt) {
                 ember                       : 'lib/ember/ember.prod.js',
                 ember_data                  : 'lib/ember-data/ember-data.prod.js',
                 ember_lsadapter             : 'lib/ember-localstorage-adapter/localstorage_adapter.js',
-                threeJs                     : 'lib/threejs-build/build/three.min.js',
+                threeJs                     : 'lib/components-threejs/three.min.js',
                 threeJsTrackBallControls    : 'lib/threejs-examples/examples/js/controls/TrackballControls.js',
                 jQuery                      : 'lib/jquery/dist/jquery.min.js',
                 handlebars                  : 'lib/handlebars/handlebars.min.js',

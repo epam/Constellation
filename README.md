@@ -3,15 +3,20 @@ OpenDaylight UI
 
 Environment setup (required steps):
 
- 	- install nodejs (http://nodejs.org/)
+ 	- install nodejs 4.2.3 (http://nodejs.org/)
 	- install grunt globally: 
     	  npm install grunt-cli -g
 	- install bower globally:
     	  npm install bower -g
 
-Launch application:
+Build application:
 
-	- run either install.sh or install.bat
+	- npm install	
+	- bower install
+	- grunt build
+
+Launch application:
+	- node app
 
 Server Debugging:
 

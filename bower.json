@@ -4,11 +4,11 @@
   
   "dependencies": {
     "components-threejs"         : "0.0.69",
-    "threejs-examples"           : "latest",
+    "threejs-examples"           : "r60",
     "ember"                      : "1.7.0",
     "handlebars"                 : "1.3.0",
-    "ember-data"                 : "1.0.0-beta.12",    
-    "ember-i18n"                 : "latest",
+    "ember-data"                 : "1.0.0-beta.14",    
+    "ember-i18n"                 : "3.1.1",
     "cldr"                       : "latest",
     "ember-localstorage-adapter" : "latest",
     "jcarousel"                  : "latest",
@@ -22,6 +22,8 @@
   },
 
   "resolutions": {
-    "handlebars": "1.3.0"
+    "handlebars": "1.3.0",
+    "ember"      : "1.7.0",
+    "ember-data" : "1.0.0-beta.14"
   }
 }
